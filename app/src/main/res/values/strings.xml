@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="current_affairs">Current Affairs Quizzes</string>
+    <string name="gk">General Knowledge\n \t \t Quizzes</string>
+    <string name="papers">Solved Exam Papers</string>
+    <string name="gk_notes">General Knowledge\n \t \t Notes</string>
+    <string name="leaderboard">eShala Leaderboard</string>
+    <string name="youtube">Learn on YouTube</string>
+</resources>
