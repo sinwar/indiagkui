@@ -1,5 +1,7 @@
 package com.example.sinwar.myapplication;
 
+import android.content.Intent;
+import android.media.Image;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -9,9 +11,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawerLayout;
 
@@ -27,7 +31,14 @@ public class MainActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.menu_bar);
 
-
+        ImageView b1 = (ImageView) findViewById(R.id.imageView10);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in=new Intent(MainActivity.this, McqActivity.class);
+                startActivity(in);
+            }
+        });
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
@@ -74,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+
+        // on click handle for nav items
+        NavigationView mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        if (mNavigationView != null) {
+            mNavigationView.setNavigationItemSelectedListener(this);
+        }
+
     }
 
     @Override
@@ -84,5 +103,17 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.all) {//DO your stuff }
+            // add operation for ids
+        }
+
+        return false;
     }
 }
