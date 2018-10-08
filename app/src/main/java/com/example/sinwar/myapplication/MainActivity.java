@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.menu_bar);
+        actionbar.setDisplayShowTitleEnabled(false);
 
         ImageView b1 = (ImageView) findViewById(R.id.imageView10);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +97,14 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
+    // to add extra icon in the navbar of app
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -116,4 +126,7 @@ public class MainActivity extends AppCompatActivity implements
 
         return false;
     }
+
+
+
 }
