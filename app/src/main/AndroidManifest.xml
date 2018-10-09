@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ListViewCurrentAffairsActivity"></activity>
         <activity android:name=".McqActivity"></activity>
     </application>
 

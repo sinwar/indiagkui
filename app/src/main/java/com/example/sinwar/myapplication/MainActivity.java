@@ -1,7 +1,6 @@
 package com.example.sinwar.myapplication;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in=new Intent(MainActivity.this, McqActivity.class);
+                Intent in=new Intent(MainActivity.this, ListViewCurrentAffairsActivity.class);
                 startActivity(in);
             }
         });

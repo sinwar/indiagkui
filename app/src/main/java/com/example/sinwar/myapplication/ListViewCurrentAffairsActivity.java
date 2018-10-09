@@ -1,18 +1,21 @@
 package com.example.sinwar.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
-public class McqActivity extends AppCompatActivity {
+public class ListViewCurrentAffairsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mcqdesign);
+        setContentView(R.layout.listviewcurrentaffairs);
 
         // set menu bar here
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -21,7 +24,19 @@ public class McqActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.menu_bar);
         actionbar.setDisplayShowTitleEnabled(false);
+
+        ImageView month = findViewById(R.id.imageView6);
+        month.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in=new Intent(ListViewCurrentAffairsActivity.this, McqActivity.class);
+                startActivity(in);
+            }
+        });
     }
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
