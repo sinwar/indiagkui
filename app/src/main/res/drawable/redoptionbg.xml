@@ -3,8 +3,9 @@
 
 
 
+
     <solid
-        android:color="#FFFFFF" />
+        android:color="#80fc7b7b" />
 
     <size
         android:width="82dp"
@@ -17,7 +18,7 @@
         android:color="#000" />
 
     <padding
-         android:left="4dp"
-         android:top="4dp"/>
+        android:left="4dp"
+        android:top="4dp"/>
 
 </shape>
